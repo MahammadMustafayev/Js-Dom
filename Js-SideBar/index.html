@@ -14,7 +14,7 @@
 
 <body>
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close <i class="fa-solid fa-xmark"></i></a>
+        <button  class="closebtn" onclick="closeX()">Close <i class="fa-solid fa-xmark"></i></button>
         <a href="#">Category 1</a>
         <a href="#">Category 2</a>
         <a href="#">Category 3</a>
@@ -25,17 +25,19 @@
       </div>
       
       <div id="main">
-        <button class="openbtn" onclick="openNav()"><i class="fa-solid fa-bars"></i> Open </button>  
-        <h1>My SideBar Project</h1>
+        <button class="openbtn" onclick="openX()"><i class="fa-solid fa-bars"></i> Open </button>  
+        <div class="circle">
+          <h1>My SideBar Project</h1>
+        </div>
       </div>
 
     <script>
-       function openNav() {
+       function openX() {
   document.getElementById("mySidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
 }
 
-function closeNav() {
+function closeX() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
 }

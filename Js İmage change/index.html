@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Slide</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="images">
+          <img src="./assets/img/001.jpg" class="big">
+        </div>
+        <div class="images"> 
+          <img src="./assets/img/005.jpg" class="big">
+        </div>
+        <div class="images">
+          <img src="./assets/img/003.jpg" class="big">
+        </div>       
+        <div class="images">
+          <img src="./assets/img/004.jpg" class="big">
+        </div>
+
+        <a class="prev cursor" onclick="change(-1)"><i class="fa-solid fa-chevron-left"></i></a>
+        <a class="next cursor" onclick="change(1)"><i class="fa-solid fa-chevron-right"></i></a>
+
+        <div class="l-img">
+          <div class="side">
+            <img class=" cursor big" src="./assets/img/001.jpg"  onclick="imgCurrent(1)" alt="">
+          </div>
+          <div class="side">
+            <img class=" cursor big" src="./assets/img/005.jpg" onclick="imgCurrent(2)" alt="">
+          </div>
+          <div class="side">
+            <img class=" cursor big" src="./assets/img/003.jpg" onclick="imgCurrent(3)" alt="">
+          </div>
+          <div class="side">
+            <img class=" cursor big" src="./assets/img/004.jpg"  onclick="imgCurrent(4)" alt="">
+          </div>
+          
+        </div>
+      </div>
+
+    <script>
+        let j = 1;
+show(j);
+
+function change(x) {
+  show(j += x);
+}
+
+function imgCurrent(x) {
+  show(j = x);
+}
+
+function show(x) {
+  let i;
+  let img = document.getElementsByClassName("images");
+  let dots = document.getElementsByClassName("asd");
+  if (x > img.length) {j = 1}
+  if (x < 1) {j = img.length}
+  for (i = 0; i < img.length; i++) {
+    img[i].style.display = "none";
+  } 
+  img[j-1].style.display = "block";
+ 
+}
+    </script>
+</body>
+
+</html>

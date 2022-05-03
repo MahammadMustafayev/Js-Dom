@@ -1,58 +1,75 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
+
 .sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(75, 230, 14);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(75, 230, 14);
+  overflow: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #FFF;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  background-color: rgb(75, 230, 14);
+  border: 1px solid rgb(75, 230, 14);
+  width: 50%;
+  height: 7vh;
+  font-size: 25px;
+  color: #fff;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  transition: 0.5s;
+}
+
+.openbtn:hover {
+  background-color: rgb(90, 2, 2);
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
   
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #FFF;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidebar a:hover {
-    color: #000000;
-  }
-  
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 25px;
-    margin-left: 50px;
-  }
-  
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: rgb(255, 0, 0);
-    color: white;
-    padding: 10px 15px;
-    border: none;
-  }
-  
-  .openbtn:hover {
-    background-color: rgb(105, 0, 0);
-  }
-  
-  #main {
-    transition: margin-left .5s;
-    padding: 16px;
-    
-  }
-  
+}
+
+.circle {
+  margin: 0 auto;
+  width: 450px;
+  height: 450px;
+  background: linear-gradient(45deg, #f02929, #e21a1a);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.circle h1{
+  padding-top: 200px;
+  margin-left: 18%;
+  color: #fff;
+  font-size: 40px;
+}
+.circle:hover{
+  box-shadow: 20px  20px 20px 10px red;
+}

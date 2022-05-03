@@ -1,0 +1,72 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+.big{
+  width: 100%;
+}
+body{
+  background-color: gold;
+}
+.main {
+  padding-top: 60px;
+  width: 70%;
+  height: 70vh;
+  margin: 0 21%;
+  position: relative;
+}
+
+
+.images {
+  width: 50%;
+  height: 50vh;
+  display: none;
+}
+
+
+.cursor {
+  cursor: pointer;
+}
+
+
+.prev,
+.next {
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(214, 27, 27, 0.8);
+}
+
+.l-img:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.side {
+  float: left;
+  width: 16.66%;
+}
+
